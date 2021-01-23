@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Dirija Bem - Concessionária</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/oroch.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <style>
+      body{
+        background-color: #B23CFD;
+        font-family:Helvetica, sans-serif;
+      
+      }
+
+      .col-md-6{
+        padding-top: 120px;
+      }
+
+      h1{
+        font-family: Helvetica, sans-serif;
+        font-size: 5em;
+        text-shadow: 4px 4px 6px rgb(43, 43, 44);
+        font-weight: bold;
+      }
+      h3{
+        font-size: 2em;
+        font-weight: bold;
+      }
+      p{
+        color:rgb(99, 99, 99);
+        font-weight: 600;
+      }
+   
+      .bg-dark{
+        background-color: #121214;
+        transition:  0.6s ease;
+      }
+      #oroch{
+        margin-top: -70px;
+      }
+
+
+      /*Slider*/
+      .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 22px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #B23CFD;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #B23CFD;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+button{
+  height: 60px;
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center" style="padding-top: 50px;">
+          <label class="switch text-white">
+            <input type="checkbox" class="" onchange="mudarBg()">
+            <span class="slider"></span>
+          </label><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <h1 class="text-white">
+            Dirija Bem
+          </h1>
+         <h3 class="text-white">Você pode escolher seu carro aqui! O que deseja fazer?  </h3><br>
+
+          <button type="button" class="btn btn-secondary btn-lg col-md-4 " data-mdb-toggle="modal"
+          data-mdb-target="#alugar" id="btn-alugar"><i class="fas fa-business-time"></i> Alugar</button>
+          <button type="button" class="btn btn-success btn-lg col-md-4 " data-mdb-toggle="modal"
+          data-mdb-target="#comprar" id="btn-comprar"><i class="fas fa-truck"></i> Comprar</button>
+        
+        </div>
+
+        <img src="img/oroch.png" id="oroch" alt="" srcset="" class="col-md-6 col-sm-12 img-fluid">
+ 
+        
+    </div>
+
+    </div>
+    
+    <!-- End your project here-->
+
+
+
+    <!-- Modal -->
+<div
+class="col-md-6 col-sm-12 modal fade"
+id="alugar"
+tabindex="-1"
+aria-labelledby="alugar"
+aria-hidden="true"
+>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="alugar">Escolha seu carro</h5>
+      
+      <button
+        type="button"
+        class="btn-close"
+        data-mdb-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <p>Preencha o formulário para alugar o veículo desejado</p>
+      <form>
+        <p>Quem aluga?</p>
+        <!-- nome input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="nome" class="form-control" />
+          <label class="form-label" for="nome">Digite seu nome</label>
+        </div>
+      
+        <!-- telefone input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="telefone" class="form-control" />
+          <label class="form-label" for="telefone">Digite seu telefone</label>
+        </div>
+        <p>Localização onde vai pegar o carro</p>
+        <!-- local input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="local" class="form-control" />
+          <label class="form-label" for="local">Local de entrega</label>
+        </div>
+        <!-- data recebimento input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="data-recebimento" class="form-control" />
+          <label class="form-label" for="data-recebimento">Data de recebimento<label>
+        </div>
+         <!-- data entrega input -->
+         <div class="form-outline mb-4">
+          <input type="text" id="data-entrega" class="form-control" />
+          <label class="form-label" for="data-entrega">Data de entrega<label>
+        </div>
+        <p>Automóvel</p>
+         <!-- marca input -->
+         <div class="form-outline mb-4">
+          <input type="text" id="marca" class="form-control" />
+          <label class="form-label" for="marca">Marca<label>
+        </div>
+        <!-- modelo input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="modelo" class="form-control" />
+          <label class="form-label" for="modelo">Modelo<label>
+        </div>
+        <!-- valor input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="valor" class="form-control" />
+          <label class="form-label" for="valor">Valor<label>
+        </div>
+        <!-- km input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="km" class="form-control" />
+          <label class="form-label" for="km">Km por dia<label>
+        </div>
+       
+        
+        
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+        Close
+      </button>
+      <button type="button" class="btn btn-success">Confirmar</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+ <!-- Modal -->
+ <div
+ class=" col-md-6 col-sm-12 modal fade"
+ id="comprar"
+ tabindex="-1"
+ aria-labelledby="comprar"
+ aria-hidden="true"
+ >
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="comprar">Escolha seu carro</h5>
+       
+       <button
+         type="button"
+         class="btn-close"
+         data-mdb-dismiss="modal"
+         aria-label="Close"
+       ></button>
+     </div>
+     <div class="modal-body">
+       <p>Preencha o formulário para comprar o veículo desejado</p>
+       <form>
+         <p>Dados pessoais</p>
+         <!-- nome input -->
+         <div class="form-outline mb-4">
+           <input type="text" id="nome" class="form-control" />
+           <label class="form-label" for="nome">Digite seu nome</label>
+         </div>
+       
+         <!-- telefone input -->
+         <div class="form-outline mb-4">
+           <input type="text" id="telefone" class="form-control" />
+           <label class="form-label" for="telefone">Digite seu telefone</label>
+         </div>
+         <!-- CPF input -->
+         <div class="form-outline mb-4">
+          <input type="text" id="cpf" class="form-control" />
+          <label class="form-label" for="cpf">Digite seu CPF</label>
+        </div>
+         <p>Localização onde vai pegar o carro</p>
+         <!-- local input -->
+         <div class="form-outline mb-4">
+           <input type="text" id="local" class="form-control" />
+           <label class="form-label" for="local">Loja de compra</label>
+         </div>
+         <!-- data recebimento input -->
+         <div class="form-outline mb-4">
+           <input type="text" id="data-recebimento" class="form-control" />
+           <label class="form-label" for="data-recebimento">Data de compra<label>
+         </div>
+        
+         <p>Automóvel</p>
+         <!-- carro input -->
+         <div class="form-outline mb-4">
+          <input type="text" id="carro" class="form-control" />
+          <label class="form-label" for="carro">Qual carro deseja comprar?<label>
+        </div>
+          <!-- marca input -->
+          <div class="form-outline mb-4">
+           <input type="text" id="marca" class="form-control" />
+           <label class="form-label" for="marca">Marca<label>
+         </div>
+         <!-- modelo input -->
+         <div class="form-outline mb-4">
+           <input type="text" id="modelo" class="form-control" />
+           <label class="form-label" for="modelo">Modelo<label>
+         </div>
+         <!-- ano input -->
+         <div class="form-outline mb-4">
+           <input type="text" id="ano" class="form-control" />
+           <label class="form-label" for="ano">Ano<label>
+         </div>
+     
+        
+         
+         
+       </form>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+         Close
+       </button>
+       <button type="button" class="btn btn-success">Confirmar</button>
+     </div>
+   </div>
+ </div>
+ </div>
+ 
+  </body>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript">
+     function mudarBg(){
+      document.body.classList.toggle("bg-dark");
+     };
+
+      
+      
+  </script>
+</html>
