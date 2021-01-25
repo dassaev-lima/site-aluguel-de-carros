@@ -52,6 +52,17 @@
         margin-top: -70px;
       }
 
+      #mudar-pagina{
+        margin-top: 40px;
+        list-style: none;
+        display: inline;
+        color:white;
+        font-weight: bold;
+        border: 1px solid white;
+        padding:10px;
+        border-radius: 8px;
+      }
+
 
       /*Slider*/
       .switch {
@@ -110,8 +121,12 @@ button{
   height: 60px;
 }
 
-footer p,a{
+footer p{
   color: white;
+}
+.dev{
+  color: white;
+  font-weight: bold;
 }
 
 
@@ -119,13 +134,18 @@ footer p,a{
   </head>
   <body>
     <!-- Start your project here-->
-    <div class="container">
+    <div class="container text-center">
       <div class="row">
-        <div class="col-md-12 text-center" style="padding-top: 50px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 " style="padding-top: 50px;">
           <label class="switch text-white">
             <input type="checkbox" class="" onchange="mudarBg()">
             <span class="slider"></span>
           </label><br><br>
+        </div>
+        <div class="col-md-3">
+          <a href="https://choosecarenglish.netlify.app" id="mudar-pagina">
+          Conhecer os Dev's</a>
         </div>
       </div>
     </div>
@@ -153,10 +173,9 @@ footer p,a{
     <footer class="container text-center">
       <div class="row">
         <div class="col-md-12"><br><br>
-          <p>Desenvolvido por Dassaev Lima | Todos os direitos reservados | 2021</p>
+          <p>Desenvolvido por Dassaev Lima e Leonardo Azevedo | Todos os direitos reservados | 2021</p>
         </div>
-          
-  
+
       </div>
    
     </footer>
