@@ -23,6 +23,10 @@
             background-color: whitesmoke;
             font-family: Helvetica, sans-serif;
         }
+        header{
+            background-color: #B23CFD;
+            height: 50px;
+        }
         h3{
         font-size: 2em;
         font-weight: bold;
@@ -31,8 +35,11 @@
         color:rgb(99, 99, 99);
         font-weight: 600;
       }
-      .row{
-          margin-top: 100px;
+      .secao-pessoal{
+          margin-top: 150px;
+      }
+      .btn{
+          font-weight: bold;
       }
       img{
           border-radius: 50%;
@@ -98,16 +105,27 @@ button{
     </style>
   </head>
   <body>
+      <header>
+
+      </header>
       <div class="container">
-          <div class="row">
-              <div class="col-md-6"><br><br>
+          <div class="row secao-pessoal">
+              <div class="col-md-6">
+                <div class="row">
                   <h3>Dassaev Lima</h3>
                   <p>I am a developer web fullstack, and i want travel to Canadá, 
                       and to work with programation e development of webpages and chatbots with IA</p>
+                  <div class="col-md-3">
+                      <button type="button" class="btn btn-default btn-block">Voltar</button>
+                  </div>
+                  <div class="col-md-3">
+                      <button type="button" class="btn btn-secondary btn-block">Ver rede Social</button>
+                  </div>
+                </div>
 
               </div>
               <div class="col-md-6  text-center">
-                    <img src="img/minha foto.jpeg" alt="Minha foto " class="col-md-6 img-fluid">
+                    <img src="img/minha foto.jpeg" alt="Minha foto " class="col-md-6 col-sm-10 img-fluid">
               </div>
           </div>
       </div>
